@@ -1,4 +1,5 @@
 from bottle import *
+import os
 
 @route('/')
 def index():
@@ -13,4 +14,5 @@ def index():
 def index():
     return "Myndir af Bill Gates"
 
-run(host="127.0.0.1", port=8080)
+run(host="0.0.0.0", port=os.environ.get('PORT'))
+#run(host="localhost", port=8080)
