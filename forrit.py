@@ -5,13 +5,13 @@ import os
 def index():
     return '<a href="about">About</a> <a href="bio">Biography</a> <a href="pic">Pictures</a>'
 @route('/about')
-def index():
+def about():
     return "Upplýsingar um Bill Gates"
 @route('/bio')
-def index():
+def bio():
     return "Biography frá Bill Gates"
 @route('/pic')
-def index():
+def pic():
     return "Myndir af Bill Gates"
 
 run(host="0.0.0.0", port=os.environ.get('PORT'))
